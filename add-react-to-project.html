@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <!-- <ul>
+        <li>JavaScript</li>
+        <li>ReactJS</li>
+    </ul> -->
+
+    <script>
+        // DOM
+        // h1DOM = document.createElement("h1");
+        // h1DOM.className = "head class";
+        // h1DOM.titles = "heading"
+        // h1DOM.innerText = "Hello các bạn"
+        // // document.body.appendChild(h1DOM);
+        // const root = document.getElementById('root');
+        // root.appendChild(h1DOM);
+        // //React
+        // const h1React = React.createElement('h1',
+        //     {className: 'head class', title: 'heading'},
+        //     "Hello các bạn");
+        import { createRoot } from 'react-dom/client';
+        //React
+        const postItem = React.createElement('div', {
+            className: 'post-item'
+        },
+            React.createElement('h2', {
+                title: 'Học React tại F8'
+            },
+                'Học ReactJS'),
+            React.createElement('p', null,
+                'Học ReactJS từ cơ bản tới nâng cao'));
+
+        // //Get root element
+        // const root = document.getElementById('root');
+
+        // //React DOM -> render UI
+        // ReactDOM.render(postItem, root);
+
+        //18.
+
+        const root = createRoot(document.getElementById('root'));
+        root.render(postItem); 
+    </script>
+</body>
+
+</html>
